@@ -31,7 +31,18 @@ public class Employee{
   }
 
   public void setSalary(Double salary) {
-    this.salary = salary;
+    if(salary >= 0){
+      this.salary = salary;
+    }
   }
+
+  public Double yearlySalary(Double salary){
+    return salary * 12;
+  }
+
+  public Double yearlySalaryMoreTenPorcent(Double salary){
+    return (salary + (salary * 0.10)) * 12;
+  }
+
 
 }
